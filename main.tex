@@ -1,0 +1,228 @@
+\documentclass[preprint,10pt]{elsarticle}
+
+%% The `ecrc' package must be called to make the CRC functionality available
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[cmintegrals]{newtxmath}
+\usepackage{bm} % optional
+\usepackage[latin1]{inputenc}
+%\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{balance}
+\usepackage{tikz}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{shapes, shadows,arrows}
+\usepackage{booktabs} % To thicken table lines
+\usepackage{longtable} 
+\usepackage{rotating}
+\usepackage{threeparttable}
+\usepackage{hhline}
+\usepackage{tcolorbox}
+\usepackage{lscape} 
+\usepackage[color=blue!10,textsize=footnotesize,textwidth=35mm]{todonotes}
+\usepackage{comment}
+\usepackage{url} 
+\usepackage{hyperref}
+
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Cross section mergers. Evidence from software industry and implications for research and practice}
+
+\author{Marcin Ocieszak, Krzysztof Wnuk, Emil Numminen}
+
+\address{}
+
+\begin{abstract}
+\todo[inline]{WNUK: Why non software need to be software they can develop themselves or buy the competence}
+Background: Mergers and acquisitions (M\&A) are two types of corporate takeover strategy, that is widely used for strengthening and maintaining a firm competitive advantage in both domestic and global markets. As digitalization continues to transform many domains, software companies seek for expanding their agenda also outside the software sector. Non-software companies need to face the challenge of becoming software intensive and decide and execute appropriate strategy for this transformation. M\&A seems to be promising as it helps to obtain experience and knowledge rather than grow it. However, the literature lacks investigations about the M\&A announcements across different industries. 
+
+Objectives: The objective of this paper is to analyze the market reactions generated from M\&A announcements between software companies and non-software companies.
+
+Methods: An event study has been used as the main methodology in this thesis. Following the event study, a second-pass regression analysis was conducted in order to explain the event study, by examine the economic impact on the abnormal return derived from M\&A announcements.
+\todo[inlne]{WNUK: Say what main results not say that a paper has results}
+Results: The result disclosed that target firms tends to experience more positive abnormal returns, while acquiring firms will experience negative abnormal returns. The results of the multiple regression analysis, revealed various significant variables that has high explanatory power to the abnormal return.
+
+Conclusions: We identified the greatest economic impact during an M\&A announcement that involves a cooperative partnerships deals between software target firms and non-software acquiring firms. Furthermore, acquiring firms tends to offer a higher premium to target firms during M\&A transactions. This in turn indicates that acquiring firms will statistically receive less abnormal returns compared to target firms.
+\end{abstract}
+
+\begin{keyword}
+Economic Impact \sep Event Study \sep Market Efficiency \sep Merges and Acquisitions Announcement \sep Prospect Theory.
+\end{keyword}
+
+\end{frontmatter}
+
+%%
+%% Start line numbering here if you want
+%%
+% \linenumbers
+
+%% main text
+\section{Introduction}\label{Intro}
+
+\todo[inline]{WNUK: We mainly validate previous research we need to say what is new }
+\todo[inline]{WNUK: make the intro shorter, what when and how, what makes this paper novel. The 100 cases analysis is the noverly of the cases. two reasons: increase IT infrastructure for conducting new business and increasing the products they offer, but if these first are mainly speculative capital gain and dividence bying IT infrastructure vs. buying developer }
+
+The software industry has proved to be a vital key and driven factor for changing and evolving our contemporary society. The increased globalization and human interconnection \cite{Pezzi} has accelerated the market growth in software industries. To gain market share and improve competitive advantage in a high-paced software market, lots of companies have resorted to different types of mergers and acquisitions  ("M\&A") \cite{McCarthy}. M\&A can also help to fulfill the following objectives: obtaining existing technology it can be more convenient for a company to utilize existing software and expertise rather than developing something new from scratch \cite{Leger}, instead of launching a new line of business it can occasionally be slightly easier for a company to buy their way into a market \cite{Silva}, improve revenues and profitability through market expansion and product line extension \cite{RAHMAN201524}, eliminate the intensity of rivalry among existing competitors  \cite{Cefis}. As software organizations are not intrinsically restricted to any specific business domain, thus making them a suitable and easy target for M\&As \cite{Pezzi}. Furthermore, software products are becoming more integrated as technology advances, which leads to new emerging and developing markets \cite{chalencon2018cross}. Consequently, the most popular targets in M\&A market, are mostly young software firms.
+
+
+The software market can provide more opportunities for firms in unrelated business industries to acquire or gain access to a desired software firm, i.e. enabling the options for creating cross-industry alliances ~\cite{Pezzi}. Thus, M\&A is a fitting strategy to adopt with the interest of advancing into a software market, where it can rapidly increase a firm's market power, without having to waste too much time before a business outcome takes effect and produces value ~\cite{schief2012business}. M\&A decisions are strategic decisions to obtain technology, access to expertise or market \cite{AURUM2003945}.
+
+%M\&A usually consist of several steps that could facilitate the process of achieving growth aspiration and a synergy effect of business operation and management  (Zhu, Xia, & Makino, 2015). Yet, depending on the market efficiency, some acquiring firms might follow their own intuitive decisions when selecting a target firm. Whereas the asymmetric economic behaviors can be explained with the help of prospect theory  a decision-making theory that interrelate with behavioral economics.
+
+M\&A transaction for software companies (that product intangible products that are easy to replicate) brings risks that can lead to value destruction across an organization ~\cite{Pezzi}, e.g. uncertain market behaviors, insecure revenues, ambiguous technology dominance, and so on. Hence, there are lots of factors and question that needs to be considered and discussed before adopting M\&A strategies ~\cite{Andriuskevicius}. Despite a wide range of literature reviews of cross-border and domestic M\&A activities, there are barely any literature investigating the economic impacts of M\&A announcements (positive/negative news) across software and non-software industries. With regard to the economic impacts, the finding has also not reached any definite consensus ~\cite{Thathaiah}. Some previous M\&A studies have reported positive effects (wealth gains), whereas some has reported negative effects (losses). For instance, mergers have shown to generate more values for target firms, while an acquiring firm have higher profit chance through an acquisition ~\cite{kashiramka2014shareholders}. 
+ 
+
+%It is therefore essential for a firm to understand the value of a firm prior to M\&A announcements, as there are various attributes that needs to be considered when selecting a target firm. Such as, what are the characteristics of the technology that is being acquired, e.g. capability, usability, age/longevity, etc. Moreover, based on historical data, how much revenues and profits, and cash flow does a business generate internally from its operations. These elements are important in determining the worth of a business, where the environmental turbulence is high and uncertain ~\cite{Pezzi}.
+
+
+
+
+
+In addition, there is still a fairly large gap between theoretical findings and successful practical adoptions of M\&As. Especially, regarding economic assessments between firms located in different countries, i.e. whether if geographic distance will create a higher or lower economic impact during M\&A announcements ~\cite{McCarthy}. Since an integration between firms has no clear-cut whether if it creates value or not, it is necessary to increase the synergy that may lead to better performance and value creation in the long run~\cite{Leger}. Another determinant that has scarcely been discussed when valuing a firm, is how essential is a firm's product knowledge within a certain industry, and will ones' own expertise facilitate the process of anticipating the potential profits and benefits of M\&A. Likewise, in the context of M\&A announcements, will the economic impacts be greater or lesser if the product knowledge asymmetry is fair, i.e. depending on if the firms are operating within or outside of the same industry (e.g. software or non-software industry), the economic impacts of the M\&A announcement might differ \cite{McCarthy}. These questions remain relevant for decision makers who either expand outside software industry or would like to obtain products and competences by M\&A with a software company. 
+
+\input{lit_and_hypo.tex}
+
+\input{research_design.tex}
+
+\subsection{Threats to validity}
+
+\textbf{Construct validity}. The main threat to construct validity is associated with our conceptualization of the relationship between stock prices and M\&As. One can question if acquiring a software company follows the same response pattern on the stock market as other companies. Software companies hold mostly intangible resources (software, customer data) that are more difficult to estimate as assets than tangible parts of the companies. We mitigate this threat by discussing the characteristics of software companies involved in the study in the discussion section.
+
+\textbf{Internal validity.} We are aware of additional independent variables or other confounding factors that may have influenced the stock prices for the companies involved in the M\&A process. We carefully selected from the available attributes from the Thomson Reuters database and expand out discussion section with potential uncovered factors. 
+
+\textbf{Reliability.} We ensure traceability by disclosing the sources of data and the extraction rules and the statistical analysis methods applied. 
+
+\textbf{External validity.} We are aware that out dataset may not represent the entire spectrum of software companies and M\&As associated with them. Still, we believe our study provides a comprehensive overiew of the studied problems since we extracted data between 1981 and 2018. It remains an open question how to handle transactions with a lower \% of the shares as a threshold. We leave that for further consideration. 
+
+
+\section{Results}\label{Results}
+\todo[inline]{WNUK: Emil wants to know how many are completed and we need to clear the numbers to do }
+%Results H1b and H1b \textit{H1a: Shareholders of target companies experience positive abnormal returns on the acquisition day}
+%H1b Shareholders of acquiring companies experience positive abnormal returns on the acquisition day
+
+
+Table 1 presents the descriptive statistic of the target shares AAR 3 days before and 3 days after M\&A announcement. The largest average abnormal return is observed on the event day (5,57\%) and one day later (3,76\%). These results are statistically significant on the level of 1\% or even 0,1\%. Significant AARs observed one, two or even three days after a deal support our semi strong market efficiency assumption. About 7-10 days after transaction the abnormal returns become close to zero and losing its statistically significance. These findings are in line with literature grounding the conclusions that shareholders of target companies benefit from the transaction (REF, REF, REF).
+Worth mentioning is that abnormal returns before transaction are present. By the researchers it is justified by insider trading problem (REF) that apparently is present in software industry like everywhere else.
+\todo[inline]{WNUK: Discuss the psychological aspect of paying extra for memories? Emil? }
+
+\input{tables/ARR_table.tex}
+
+Similar conclusions can be found when analysing Table 2 presenting abnormal returns of acquiring companies. At the announcement date AAR was at its highest (1,63\%) with statistical significance at the level of 1\%. Following days are characterised with lower returns and finally after about 3 days we cannot see impact of merger on shareholder value.
+
+
+\input{tables/CAAR_results.tex}
+
+On the one hand, acquirers returns are lower, statistically weaker than their targets and the returns sustain shorter. On the other hand, however, acquirers AARs and CAARs are still positive and significant. This findings support hypothesis H1a and H1b stating that abnormal returns around announcement date are positive for target and acquiring company.
+
+\todo[inline]{WNUK: So a discussion point may be that it is better to buy a company than to create your own software development department? How does it look like for non-software buying software?}
+
+Worth mentioning is that findings regarding H1b (acquirer positive returns) are rather in contradiction to the literature since majority of researchers arrived to a conclusion that this returns are negative (REF, REF, REF, REF). 
+
+HERE: Why it is different? Do shareholders believe more in software cross section acquisitions than other industries? Software is sexy than. Acquirers make more rational decisions. Maybe a part of discussion lateron
+
+%Results H2b and H2b 
+
+The hypothesis H2 "Targets and acquirers experienced greater significant economic impact on the event day during cross-border M\&A announcements compared to domestic M\&A announcements" has been accepted in terms of target companies to some extended. We found proofs supporting the hypothesis that domestic transactions influence negatively abnormal returns. For models (2), (3) and (4) the regressor \textit{domestic} was negative -0,089, -0,11 and -0,059 and statistical significant on the level of 10\%, 5\% and 5\% respectively.
+When speaking about acquiring companies the results are less straightforward. In models presented in Table X none of the parameters for domestic variable was statistically significant. That is why we cannot accept nor deny the hypothesis, however, lack of observed statistical associations between this two variables is in line with our expectations. 
+\todo[inline]{HERE: discussion about internationalisation of software, no borders etc. and since we have services and online stuff we go global when we launch the product}
+
+\input{tables/deter_targ.tex}
+
+The hypothesis H3 stating that there are significant positive associations between share price performance and industry in which target and acquirers operates returned ambivalent results. On the one hand we did not observed relationship between industry characteristics when speaking about target companies. On the other hand, when examining acquiring companies we can observe that when acquirer is a finance related entity the stock returns yield positve abnormal returns. This phenomenon can be seen in table X, models (1), (2) (3) and (5) where aggressors for variable "finance" are positive and statistically significant.
+
+\todo[inline]{To sum up before we move to conclusions: 1) Mergers influence positively shareholders of targets (in line) and acquirers (not necessarily inline with literature). 2) Domestic deals yields poor results so investors prefer international 3) If acquirer is from finance industry it gives higher returns. All other industry relations that we examined are not relevant.}
+
+\input{tables/deter_acq}
+
+\section{Analysis and Discussion}\label{Discussion}
+
+\todo[inline]{this section is "not touched". So has conclusions copied from Master thesis}
+%Event discussion (H1)
+Based on presented results, in context of hypothesis H1a and H1b we have summarized that \textbf{in the day of the M\&A announcement shareholders of target company benefit significantly} however we did not find sufficient evidence to support hypothesis H1b that shareholders of acquiring company benefit from the M\&A announcement. This may support a conclusion about irrational acquirers' behaviour and questionable motives of the transactions. On the other hand, this seems to be an indication that the market interprets the M\&A announcements differently, where it can be perceived as either a value destroying or value enhancing impact for the underlying acquiring and target firm's shareholders respectively. This result is in line with  literature \cite{Campa} that states that shareholders of acquiring firm tends to receive negative abnormal returns, while shareholders of target firms enjoy positive abnormal returns. There is a low impact on the abnormal returns prior to the event day which in turn implies that the length of the estimation window is long enough to prevent information leakage. After the event day, the abnormal returns %of acquiring company?? 
+drops drastically, where it goes back to its previous original state, as a new information is being incorporated into stock prices rapidly. This implication is roughly consistent with the efficient market hypothesis \cite{fama1991}, since there is a clear indication that an announcement effect is starting to wear off immediately after the event day.
+
+%Determinants discussion
+%    - Country effect
+
+ As is seen in Table 4, there is no active significant country effect for neither acquiring nor target firms. These results are in line with Mateev \cite{MATEEV2017}, however, it is quite unexpected that the country effect did not show through in any of the regression models since majority of the studies have reported positive results for domestic and cross-border M\&As (REF, REF, REF). For example, firms that are located in the same country should be able to hold a good communication level compared to cross-border M\&As, i.e. regularly transferring more complete and accurate business information (REF), mitigate the risk of cultural differences (REF), more opportunity to understand the local market (REF), etc. This in turn will make it easier for an acquiring firm to assess a target firm prior to an M\&A transaction. On the other hand, the expectation of cross-border M\&As is, that firms ought be able to extend their market power and expand business diversification that is not available domestically (REF). Nevertheless, a common reason why there is no significant country effect, is that investors argues that the capital market is global (REF). Which means that every country is trading more or less with the same play rules, therefore it makes no difference if the acquiring and target firm is located in the same or different country.
+
+%cross industry effect
+
+The finding is partially in line with Martynova \& Renneboog (2006) who found that conglomerate mergers, i.e. cross-industry mergers will generate higher abnormal returns for target firms. It comes with little surprise that industry relatedness is relevant under theses circumstance, given that an extensive of previous studies has shown different significant results. Where the most common outcome is that acquiring and target firms will more likely gain higher abnormal returns if the involving firms operates in the same industry. The reason for this, as mentioned in the previous chapters, is that operating in the same industry can provide better synergistic effects and create more opportunities for a business to capture market shares. On the other hand, cross-industry carry more risks, and is expected to underperform. Furthermore, firms that decided to invest in diversified businesses, are prone to be subjected to higher agency costs. Which is often caused by managerial self-interest, e.g. managers who refrains from prioritizing value-creation for shareholders, and focus more on diversifying their businesses. Nevertheless, seeing that diversification across different industry prevails, might imply that investors perceive cross-industry as a positive activity.
+
+Consequently, moving along with the fact that the industry relatedness effect is observable, which is simulated in an articulate pattern with the transition of Regression Model 2 to Regression Model 3 in Table 4.9 An interesting perceivable pattern is that the significant variables for acquiring firm are not significant for target firms, and vice versa. With the exception of the non-significant Country variable, other significant variables traits can be interpret as follows: Industry  has a positive significant economic impact on the abnormal return for software target firms. Which indicates that a software target firm will earn a higher abnormal return if acquired by a non-software firm. On the other hand, Deal Size and Revenue  has a positive significant economic impact on the abnormal return for non-software acquiring firm. When a non-software acquiring firm acquires a software target firm, the information regarding the software target firm becomes more active and impactful. As stated by Alexandridis et al. \cite{ALEXANDRIDIS2017}, if the deal size is large then acquiring firms with higher values, e.g. larger revenue will have a higher chance of receiving a positive abnormal return. Moving on, Sales Multiple  has a negative significant economic impact on the abnormal return for non-software acquiring firm. Since, the non-software acquiring firms are the buyers, their investors will most likely have low expectations in future sales. That is, a non-software acquiring firms' revenue growth will not increase for the time being during M\&As. Meanwhile, software target firms will have a positive sign on the Sales Multiple, when acquired by a non-software firm. Whereas in this case, investors of a software target firm might have the mentality of believing that future revenues will increase. As it is shown, that the Revenue variable has become positive for software target firms when comparing Regression Model 2 with Regression Model 3. The next variable is Day Prior Event Premium  which has a positive significant economic impact on the abnormal return for software target firms. As expected, the greater the premium offer the greater abnormal return will a software target firm earn. Since there is an expectation for software target firms to receive a reasonable high premium from non-software acquiring firm, in order for target shareholders to give up their shares. Lastly, the Ebitda Multiple  has a negative significant economic impact on the abnormal return for software target firm. As a normal practice, in order to determining the right premium for a software target firm, a non-software acquiring firm would need to assess the value of a firm. Therefore, different multiple measurements can be used for comparing the financial status between different firms. Moreover, when comparing multiples, it is preferably to compare firms that operates in the same industry, Hence, this might explain the negative signs in cross-industry for software target firms, or that there might be some problems with software target firms' profitability when acquired by a non-software firm.
+
+It seems like that the market reaction in this event study, is consistent with the efficient market hypothesis to a certain degree. Since there is a clear indication in the event window that the stock market is incorporating new public available information in the form of abnormal return, i.e. generated by M\&A announcements. However, some of the prominent variables/factors that was suspected to affect the abnormal return, arrived at some unconventional results in the multiple regression analysis. Such as, the country effect was not in line with either Erel et al. or Boubakri et al. \cite{erel2012,BOUBAKRI20121}. As seen in Table 4, both domestic and cross-border M\&A scenarios showed no significant incremental or decremental explanatory power to the abnormal return, or to any other included variables in respective regression models. This can be depict by comparing Regression Model 1 with Regression Model 2, or Regression Model 3 with Regression Model 4. Where the significant -values for both acquiring and target firms has similar explanatory power, and significance level in respective regression models comparison. On another note, since the Country variable has no effect in any of the regression models, the main focus of this analysis will indirectly be shifted to the Industry variable. The industry relatedness effect exhibited some intriguing results. For instance, due to the industry relatedness effect, an increase in number of significant variables can be identified for both acquiring and target firms in Regression Model 3. Whereas the changeover from Regression Model 2 to Regression Model 3, also presents a noticeable increase in explanatory powers growth for each significant variable. These findings, however, are not supported by literature \cite{scanlon1989,bley2003,LIM2016,amewu}, since there are more significant variables with high explanatory power in Regression Model 3. That is, in cross-industry M\&As both acquiring and target firms can gain higher abnormal returns, compared to the number of significant variables and theirs explanatory power in Regression Model 2. Furthermore, the premium is also higher for target firms in Regression Model 3. This in turn might imply that both acquiring and target firm is under a more influential Winner's curse and Endowment effect respectively.
+\todo[inline]{WNUK: start from analysing the reason column and later code the acquirer business description and target business description see the file in the repo}
+\begin{figure}
+    \centering
+    \includegraphics{ColumnX.jpg}
+    \caption{The Deal Purpose for all deal with more than 50 percent of the stock acquired}
+    \label{FigThePurpose}
+\end{figure}{}
+
+The most common reason was to strengthen operations (93 cases) or strengthen existing operations or expand in primary market (61 cases). Expanding in new o foreign markets was mentioned in only 26 cases, or in new geographical regions in 4 cases. However the possibility to offer new product and services was mentioned in 55 cases. This is interesting \todo[inline]{WNUK: Analyze} 
+Next, creating synergies (73) and eliminating duplicate services or operations (73) was frequently mentioned as a reason. 
+
+\section{Conclusion and Future Work}\label{Conclusion}
+
+In summary, the article have analyzed whether if the market reaction derived from M\&A announcements, will generate greater economic impacts on the abnormal return for shareholders of companies that operates in the same industry or in different industries. In order to investigate this phenomenon, an event study has been conducted followed by a multiple regression analysis. Where the time period of announcement dates lasted from 1999 to 2018, which resulted in a total of 144 M\&A announcements. Furthermore, various variables with potential influencing factors on the abnormal return has been brought together to spice up the event study, e.g. country effect, industry relatedness and premium, has more or less been the main focus throughout this work. With the results obtained from the event study, it is safe to infer that target firms tends to experience positive abnormal returns upon M\&A announcements, while acquiring firm will experience negative abnormal returns during the event day.
+In the final analysis, few remarks has been pointed out with the intention of gaining new insights from the result tables. Based on the output from the multiple regression analysis, the statistical significant variables are either consistent or inconsistent with past research results. This is interesting to point out, since the findings in this thesis, suggest that the significant variables for respective acquiring and target firms can explains a good portion of the variance in abnormal return. Another intriguing result to point out is that the independent variable for country effect, seems to have no significant explanatory power on the abnormal return under any circumstance. This was an unexpected outcome, since country effect is a common influential variable to include when analyzing the economic impact on abnormal return. Nevertheless, the most prominent effect which the author wanted to behold in this thesis, is the industry relatedness effect. By observing the transition of Regression Model 2 to Regression Model 3 it is possible to identify a clear positive significant explanatory powers growth for each significant variable. That is, both non-software acquiring firm and software target firm will experience a significant increase in economic impact on the abnormal return, in comparison with Regression Model 2. Thus, a conclusion can be drawn, that the greatest overall significant economic impact will occur when a software target firm is acquired by a non-software acquiring firm.
+The research question for this thesis is the following: Will M\&A announcements of software acquiring and target firms generate a greater economic impact than a combination of non-software acquiring firms and software target firms? The answer to this research question is as follows: The greatest economic impact will occur with the latter grouping, i.e. when the M\&A announcements consist of non-software acquiring firms and software target firms.
+To further emphasize the answer to the research question, the implication of the obtained empirical results can be interpreted as follows: the event study reveals that that there was indeed a significant abnormal return in relation to M\&A announcements on the event day. In other words, this discovery indicates that the abnormal return did not occur by chance, it could in fact be due to the event itself. Furthermore, the results generated from the multiple regression analysis disclosed that the greatest economic impact will occur when the M\&A announcements consist of non-software acquiring firms and software target firms, i.e. in Regression Model 3. As this regression model contained the most number of significant variables with the highest explanatory power to the abnormal return. To be more specific, software target firms will be receiving higher abnormal returns compared to non-software acquiring firms. One of the reason why the Premium variable for target firms has the highest positive significant explanatory power, might be due to the fact that non-software acquiring firms are required/willing to pay a higher premium to software target firms in order to gain a new/existing software technology. As described in previous chapter,10 with the intention of accessing a broader spectrum of technology, and to gain existing relevant technological knowledge through an acquisition, a high premium is inevitable.
+When conducting an event study there are many limitations that can be associated with the event study itself, but at the same time there is also a load full of possibilities to customize an event study with a specific objective in mind. Due to the fact that there is actually no mandatory structure to follow, instead there are important steps that one should be aware of when performing an event study. Thus, rather than trying to outline certain limitations that comes to mind, the author will suggest potential improvements and other aspects to consider in future research.
+
+Needless to say, the dependent variable, i.e. in this case abnormal return has countless of different known factors that can influence its value and comportment. However, in most cases, it can be difficult and not recommended to include every factors there is. Therefore, depending on the research topic, some certain variables are more suitable to include and examine than others. For instance, a common known variable that was not embraced in this thesis is the payment method. There are numerous payment methods to choose from during M\&A transactions, such as cash, stock, asset, and mixed payment. Hence, it would be interesting to find out which payment method will generate the highest economic impact on the abnormal return. Since previous studies has opposing views regarding which payment methods is the most beneficial, where a payment method can also represent the wealth of a firm's shareholders. Therefore, by including payment methods in an event study, it might be able to facilitate the process of valuing a company prior to M\&A activities. Although the payment method variable has been included in various past research studies, the context related to non-software and software firm remains scant. Hence, the author propose that in future research that are similar to this thesis topic, should include the payment method variable. Where the purpose could be to determine if an acquiring or a target firm will earn more abnormal return for their shareholders depending on which payment method is being used.
+
+Another suggestion of future work is to investigate whether if the experience of an acquiring firm has a positive effects on acquisition performance. That is, if a firm with prior/more acquisition experience, will perform better acquisitions compared to firms with limited acquisition experience. The term experience in this case may refer to factors that can be of advantage for an acquiring firm to benefit from/with in subsequent acquisitions. Such as, is there any significant relation between previous learned knowledge of acquisition deals, and acquisition performance. Where previous learned knowledge can be represented as, for example, number of previous acquisition deals, deal size similarity, etc. Which in turn might have some statistical explanatory power that can explain/affect acquisition performance, where performance might also as well be estimated/measured as abnormal returns. This recommended future approach, is an interesting area to investigate. Since acquisition experience plays an important role when it comes to strategic investment planning and valuation regarding business takeovers. Additionally, acquisition experience might also be able to facilitate the process of an acquisition, or even serve as a motivation for an acquiring firm to acquire a target firm outside of their own comfort zone. That is, acquiring a target firm that operates in another industry, e.g. software or non-software industry. Hence, it would be interesting to investigate and determine whether if acquiring firms with more experience, can generate more value during an event of acquisitions.
+
+% more complex set of determinants
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+%% \appendix
+
+%% \section{}
+%% \label{}
+
+%% References
+%%
+%% Following citation commands can be used in the body text:
+%% Usage of \cite is as follows:
+%%   \cite{key}         ==>>  [#]
+%%   \cite[chap. 2]{key} ==>> [#, chap. 2]
+%%
+
+%% References with BibTeX database:
+
+\bibliographystyle{elsarticle-num}
+\bibliography{refs}
+
+%% Authors are advised to use a BibTeX database file for their reference list.
+%% The provided style file elsarticle-num.bst formats references in the required Procedia style
+
+%% For references without a BibTeX database:
+
+% \begin{thebibliography}{00}
+
+%% \bibitem must have the following form:
+%%   \bibitem{key}...
+%%
+
+% \bibitem{}
+
+% \end{thebibliography}
+
+\end{document}
+
+%%
+%% End of file `ecrc-template.tex'. 
